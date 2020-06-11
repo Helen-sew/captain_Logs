@@ -1,0 +1,30 @@
+{
+  "name": "captain_Logs",
+  "version": "1.0.0",
+  "description": "captainLogs Homework",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "reseed": "mongoimport --jsonArray --db homework --collection captain --drop --file ./db/seed/captain.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helen-sew/captain_Logs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Helen-sew/captain_Logs/issues"
+  },
+  "homepage": "https://github.com/Helen-sew/captain_Logs#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "method-override": "^3.0.0",
+    "mongo-seeding": "^3.4.1",
+    "mongodb": "^3.5.8"
+  }
+}
