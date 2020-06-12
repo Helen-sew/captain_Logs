@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+	<body>
+        <div class='btn-top'>
+        <a href="/logs"><button class="btn btn-secondary btn-lg" type="submit">ALL CAPTAINLOGS</button></a>
+        <span class='span'></span>
+    	<form action="/logs/<%= showOneCaptainLogs.title%>?_method=DELETE" method="POST">
+            <button class="btn btn-secondary btn-lg" type="submit">DELETE PRODUCT</button>
+        </form>
+        <span class='span'></span>
+        <a href="/logs/<%= showOneCaptainLogs.title%>/edit"><button class="btn btn-secondary btn-lg" type="submit">EDIT PRODUCT</button></a>    
+        </div>
+
+
+        <div class="card">
+
+        
+            <h1><%= showOneCaptainLogs.title %></h1>
+            <p class="entry"></p> <%= showOneCaptainLogs.entry%></p>
+            <p><%= `Ship Is Broken : ${showOneCaptainLogs.shipIsBroken}`%></p>
+            
+            
+            
+          </div>
+
+        
+		 
+		
+	</body>
+</html>

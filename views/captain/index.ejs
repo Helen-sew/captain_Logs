@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+	<!--Navagation --> 
+	<nav class="nav">
+		<a class="nav-link" href="/logs/new"><button class="btn btn-secondary btn-lg" type="submit">ADD NEW LOGS</button></a>
+	</nav>
+
+
+	<div class="item-div">
+
+	<% allCaptainLogs.forEach((item) => { %>
+
+		<div class="card">
+			<div class="card-header">
+				<h2 class="card-title"><%= item.title %></h2>
+			</div>
+			<div class="card-body">
+			  <p class="card-text"><%= item.entry %></p>
+			  <p><%=`Is Ship Broken : ${item.shipIsBroken}`%></p>
+			  <a href="/logs/<%= item.title %>" <%= item.title %>class="btn btn-primary">read more</a>
+			</div>
+	   </div>
+
+
+	  
+	  
+	<%})%>
+
+
+</div>
+</body>
+
+</html>

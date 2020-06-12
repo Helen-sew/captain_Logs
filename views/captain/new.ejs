@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+
+	<nav class="nav">
+		<a class="nav-link" href="/logs/"><button class="btn btn-secondary btn-lg" type="submit">ALL CAPTAIN LOGS</button></a>
+	</nav>
+
+
+	<h1 class="add-product-h1">ADD NEW CAPTAIN LOGS</h1>
+  
+	     
+    <form class="add-product-form" action="/logs" method="POST">
+        <div class="form-group">    
+            <label for="title">Title</label>
+            <input type="text" class='form-control' name="title" id="title"/>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="entry">Entry</label> 
+            <textarea class="form-control" name="entry" id="entry" row='5'></textarea>
+        </div>
+        <h3>Is Ship Broken?</h3>
+        <input type="checkbox" id="shipIsBroken" name="shipIsBroken" value="true">
+        <label for="shipIsBroken"></label>true </label><br>
+         <input type="checkbox" id="shipIsBroken" name="shipIsBroken" value="false">
+        <label for="shipIsBroken"> false</label><br>
+          
+
+
+    </br>
+        <button class="btn btn-secondary" type="submit">Add New Log</button>
+
+      </form>
+    
+    
+      
+
+    
+</body>
+</html>
