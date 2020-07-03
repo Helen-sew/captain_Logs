@@ -1,7 +1,7 @@
 const captainLogController = require('./controllers/captainLogController');
 
 module.exports = app => {
-    app.get('/logs', captainLogController.getAll);
+    app.get('/', captainLogController.getAll);
     app.get('/logs/new', captainLogController.getNewForm);
     app.post('/logs', captainLogController.create);
     app.get('/logs/:title', captainLogController.show);
