@@ -64,7 +64,7 @@ module.exports = {
         try{
             console.log(req.params)
             await captainLogRepository.delete(req.params);
-            return res.redirect('/logs');
+            return res.redirect('/');
         }catch (err) {
             return res.send(err.message);
         }
