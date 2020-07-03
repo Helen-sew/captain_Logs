@@ -6,13 +6,13 @@
 </head>
 	<body>
         <div class='btn-top'>
-        <a href="/logs"><button class="btn btn-secondary btn-lg" type="submit">ALL CAPTAINLOGS</button></a>
+        <a href="/logs"><button class="btn btn-secondary btn-lg" type="submit">ALL CAPTAIN LOGS</button></a>
         <span class='span'></span>
     	<form action="/logs/<%= showOneCaptainLogs.title%>?_method=DELETE" method="POST">
-            <button class="btn btn-secondary btn-lg" type="submit">DELETE PRODUCT</button>
+            <button class="btn btn-secondary btn-lg" type="submit">DELETE LOG</button>
         </form>
         <span class='span'></span>
-        <a href="/logs/<%= showOneCaptainLogs.title%>/edit"><button class="btn btn-secondary btn-lg" type="submit">EDIT PRODUCT</button></a>    
+        <a href="/logs/<%= showOneCaptainLogs.title%>/edit"><button class="btn btn-secondary btn-lg" type="submit">EDIT LOG</button></a>    
         </div>
 
 
@@ -21,7 +21,17 @@
         
             <h1><%= showOneCaptainLogs.title %></h1>
             <p class="entry"></p> <%= showOneCaptainLogs.entry%></p>
-            <p><%= `Ship Is Broken : ${showOneCaptainLogs.shipIsBroken}`%></p>
+            <p><%= `Ship Is Broken : ${showOneCaptainLogs.isShipBroken}`%></p>
+            <br>
+            <br>
+            <br>
+            <p><%= `Created at  : ${showOneCaptainLogs.date}`%></p> 
+            
+
+
+
+
+        
             
             
             

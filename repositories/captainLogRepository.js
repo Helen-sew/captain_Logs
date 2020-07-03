@@ -38,5 +38,11 @@ module.exports = {
     async delete(item) {
         const deletedCaptainLog = await db.captain.deleteOne(item);
         return deletedCaptainLog;
+    },
+    async getOneByTitle(title) {
+        const foundCaptainLog = await db.captain.findOne({title: {'$regex': `^${title}$`, '$options': 'i'}});
+        if(!title) throw new Error("No such title");
+        return foundCaptainLog;
     }
+
 };

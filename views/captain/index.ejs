@@ -12,17 +12,23 @@
 	</nav>
 
 
+	<div class="">
+		<img src="https://aie-guild.org/wp-content/uploads/2019/05/AIE-Blog-Banner-STO-1.png" class="d-block w-100" alt="captain log">
+	</div>
+		  
+	
+	
 	<div class="item-div">
 
 	<% allCaptainLogs.forEach((item) => { %>
 
-		<div class="card">
+		<div class="card" style="width: 60rem; height:33rem;">
 			<div class="card-header">
 				<h2 class="card-title"><%= item.title %></h2>
 			</div>
 			<div class="card-body">
 			  <p class="card-text"><%= item.entry %></p>
-			  <p><%=`Is Ship Broken : ${item.shipIsBroken}`%></p>
+			  <p><%=`Is Ship Broken : ${item.isShipBroken}`%></p>
 			  <a href="/logs/<%= item.title %>" <%= item.title %>class="btn btn-primary">read more</a>
 			</div>
 	   </div>
